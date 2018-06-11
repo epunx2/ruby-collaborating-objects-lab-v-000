@@ -25,7 +25,7 @@ class Artist
     else
       artist = Artist.new(name)
     end
-    self
+    artist
   end
 
   def save
