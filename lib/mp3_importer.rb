@@ -17,7 +17,7 @@ class MP3Importer
 
   def files
     list_of_filenames = Dir.entries(@path)
-    list_of_filenames.delete(".")
+    list_of_filenames.delete(".","..")
     list_of_filenames.delete("..")
     list_of_filenames
   end
