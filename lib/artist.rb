@@ -21,7 +21,7 @@ class Artist
 
   def self.find_or_create_by_name(name)
     artist = @@all.select {|obj| obj.name == name }
-    if artist == ""
+    if !artist
       artist = Artist.new(name)
     end
     artist
