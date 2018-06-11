@@ -20,9 +20,8 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    if @@all.detect {|obj| obj.name == name }
-      artist = @@all.select {|obj| obj.name == name }
-    else
+    artist = @@all.select {|obj| obj.name == name }
+    if artist == ""
       artist = Artist.new(name)
     end
     artist
