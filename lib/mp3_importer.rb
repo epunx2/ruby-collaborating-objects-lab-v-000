@@ -25,6 +25,7 @@ class MP3Importer
   def import
     list_of_filenames = []
     list_of_filenames = Dir.entries(@path)
+    binding.pry
     list_of_filenames.delete(".")
     list_of_filenames.delete("..")
     list_of_filenames.each do |filename|
